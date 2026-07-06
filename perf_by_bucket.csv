@@ -1,0 +1,4 @@
+sentiment_bucket,trades,total_pnl,avg_pnl,median_pnl,win_rate,avg_size_usd
+Fear,40214,4096265.69,101.862,6.356,0.844,7375.189
+Greed,46029,4865300.584,105.701,6.486,0.825,4233.988
+Neutral,18159,1292920.676,71.2,4.583,0.824,5556.445

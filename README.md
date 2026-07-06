@@ -6,7 +6,7 @@ This project analyzes the relationship between Bitcoin Market Sentiment (Fear & 
 
 ---
 
-## Files
+## Repository Contents
 
 - analysis_script.py
 - charts_script.py
@@ -38,9 +38,8 @@ This project analyzes the relationship between Bitcoin Market Sentiment (Fear & 
 ## How to Run
 
 ```bash
-python analysis_script.py
-
-python charts_script.py
+python3 analysis_script.py
+python3 charts_script.py
 ```
 
 ## Author

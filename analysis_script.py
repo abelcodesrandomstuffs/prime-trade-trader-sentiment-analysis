@@ -5,7 +5,7 @@ pd.set_option('display.width', 140)
 
 # ---------- Load ----------
 fg = pd.read_csv("fear_greed_index.csv")
-hd = pd.read_csv("history_data.csv")
+hd = pd.read_csv("historical_data.csv")
 
 fg['date'] = pd.to_datetime(fg['date'])
 hd['Timestamp IST'] = pd.to_datetime(hd['Timestamp IST'], format='%d-%m-%Y %H:%M')
@@ -99,9 +99,11 @@ corr_size = daily[['avg_size','value']].corr().iloc[0,1]
 print("Correlation between avg trade size and Fear/Greed numeric value:", round(corr_size,4))
 
 # Save intermediate outputs for chart-building
-df.to_parquet('/home/claude/analysis/merged.parquet')
-daily.to_csv('/home/claude/analysis/daily.csv', index=False)
-closes.to_parquet('/home/claude/analysis/closes.parquet')
-perf.to_csv('/home/claude/analysis/perf_by_class.csv')
-perf_b.to_csv('/home/claude/analysis/perf_by_bucket.csv')
+# Save intermediate outputs for chart-building
+df.to_parquet("merged.parquet")
+daily.to_csv("daily.csv", index=False)
+closes.to_parquet("closes.parquet")
+perf.to_csv("perf_by_class.csv")
+perf_b.to_csv("perf_by_bucket.csv")
+
 print("\nSaved intermediate files.")
