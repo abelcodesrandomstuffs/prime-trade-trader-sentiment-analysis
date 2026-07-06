@@ -4,8 +4,8 @@ import numpy as np
 pd.set_option('display.width', 140)
 
 # ---------- Load ----------
-fg = pd.read_csv('/mnt/user-data/uploads/fear_greed_index.csv')
-hd = pd.read_csv('/mnt/user-data/uploads/historical_data.csv')
+fg = pd.read_csv("fear_greed_index.csv")
+hd = pd.read_csv("history_data.csv")
 
 fg['date'] = pd.to_datetime(fg['date'])
 hd['Timestamp IST'] = pd.to_datetime(hd['Timestamp IST'], format='%d-%m-%Y %H:%M')
